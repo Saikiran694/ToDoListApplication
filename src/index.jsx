@@ -1,11 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
 import App from "./components/App.jsx"
+import tasksStore from "./tasksStore.js";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-    
-        <App />
+        <Provider store={tasksStore}>
+           <App />
+        </Provider>
+       
     
 );

@@ -1,12 +1,18 @@
 import React from "react";
-function ListToDOItems(props) {
+import { setTasks } from "../taskSlice";
+import { useSelector, useDispatch } from "react-redux";
+
+function ListToDOItems() {
+    
+    const tasks = useSelector((state) => state.tasks);
+    console.log(JSON.stringify(tasks));
     return(
-        <ul>
-            {props.tasks.map((item, index) => (
+        <ol>
+            {tasks.tasks.map((item, index) => (
                 <li key={index}>{item}</li>
             ))}
             
-        </ul>
+        </ol>
     );
 }
 
