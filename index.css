@@ -6,3 +6,16 @@
 .app-name {
     text-align: center;
 }
+
+.task-item {
+    display: flex;
+}
+
+.item-name {
+    flex: 3;
+}
+
+.delete-task {
+    flex: 1;
+}
+

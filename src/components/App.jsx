@@ -11,7 +11,7 @@ function App()  {
     return(
         <>
         <div> Welcome, You can create and view your TO DO Items here!!!</div>
-        
+        <CreateToDoItem />
         <ListToDOItems />
         </>
         

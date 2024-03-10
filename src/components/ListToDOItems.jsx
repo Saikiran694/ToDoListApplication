@@ -1,6 +1,7 @@
 import React from "react";
 import { setTasks } from "../taskSlice";
 import { useSelector, useDispatch } from "react-redux";
+import DeleteToDOItem from "./DeleteToDOItem";
 
 function ListToDOItems() {
     
@@ -9,7 +10,15 @@ function ListToDOItems() {
     return(
         <ol>
             {tasks.tasks.map((item, index) => (
-                <li key={index}>{item}</li>
+                
+                    <li key={index} className="task-item"> 
+                        <div className="item-name">
+                            {item} 
+                        </div>
+                        <DeleteToDOItem index={index}/>
+                    </li>
+                
+                
             ))}
             
         </ol>

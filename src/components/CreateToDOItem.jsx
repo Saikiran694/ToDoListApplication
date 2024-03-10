@@ -1,12 +1,17 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setTasks } from "../taskSlice";
 function CreateToDoItem({onUpdateData}) {
+
+    const dispatch = useDispatch();
     const [inputText, setInputText] = useState('');
     const handleOnChange = (event) => {
         setInputText(event.target.value);
     }
 
     const handleOnSubmit = () => {
-        onUpdateData(inputText);
+       // onUpdateData(inputText);
+        dispatch(setTasks(inputText));
         setInputText('');
     }
 
